@@ -59,7 +59,6 @@ $(function(){
     // 軌道
     let line_html = `
         <div class="line selected">
-            <span></span><span></span><span></span><span></span><span></span><span></span>
             <div class="del">X</div>
         </div>`
 
