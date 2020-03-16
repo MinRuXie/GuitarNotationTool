@@ -159,11 +159,17 @@ $(function(){
     // 新增音符
     //-------------------
     function addTABNote(note_color, chord, grid) {
-        let note_text = chord == '' ? '' : notes_array[chord-1][grid];
-        let tab_note = `
-            <div class="note ${note_color} selected" title="${notes_array_2[chord-1][grid]}">
-                <span>${note_text}</span>
-            </div>`;
+        let tab_note = "";
+
+        if(chord == '') {
+            tab_note = `
+                <div class="note ${note_color} selected"><span></span></div>`;
+        } else {
+            tab_note = `
+                <div class="note ${note_color} selected" title="${notes_array_2[chord-1][grid]}">
+                    <span>${notes_array[chord-1][grid]}</span>
+                </div>`;
+        }
         
         // 刪除所有音符焦點
         $('.note.selected').removeClass('selected');
