@@ -120,23 +120,20 @@ $(function(){
     function delLine(line) {
         // 檢查軌道數量
         if ($text_tabs.find('.line').length > 1) {
-            // 檢查軌道中是否有焦點
-            if (line.find('.selected').length != 0) {
-                let $prevLine = line.prev('.line');
-                let $nextLine = line.next('.line');
+            let $prevLine = line.prev('.line');
+            let $nextLine = line.next('.line');
 
-                // 移除所有焦點
-                $text_tabs.find('.line').removeClass('selected');
-                $text_tabs.find('.note').removeClass('selected'); 
-                
-                // 移動焦點置上或下一軌道的最後一個音符 (如果有)
-                if ($prevLine.length != 0) {
-                    $prevLine.find('.note').last().addClass('selected');
-                    $prevLine.addClass('selected');
-                } else if ($nextLine.length != 0) {
-                    $nextLine.find('.note').last().addClass('selected');
-                    $nextLine.addClass('selected');
-                }
+            // 移除所有焦點
+            $text_tabs.find('.line').removeClass('selected');
+            $text_tabs.find('.note').removeClass('selected'); 
+            
+            // 移動焦點置上或下一軌道的最後一個音符 (如果有)
+            if ($prevLine.length != 0) {
+                $prevLine.find('.note').last().addClass('selected');
+                $prevLine.addClass('selected');
+            } else if ($nextLine.length != 0) {
+                $nextLine.find('.note').last().addClass('selected');
+                $nextLine.addClass('selected');
             }
 
             // 移除軌道
