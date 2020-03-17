@@ -201,7 +201,7 @@ $(function(){
     //-------------------
     // 吉他面板控制
     //-------------------
-    function controlPianoLayout(kind){
+    function controlInputLayout(kind){
         switch(kind){
             case "close": {
                 $text.stop().animate({'height': '100%'}, 300);
@@ -291,12 +291,12 @@ $(function(){
                         addLine();
                         break;
                     }
-                    case 3: { // 開啟鋼琴
-                        controlPianoLayout('open');
+                    case 3: { // 開啟輸入面板
+                        controlInputLayout('open');
                         break;
                     }
-                    case 4: { // 關閉鋼琴
-                        controlPianoLayout('close');
+                    case 4: { // 關閉輸入面板
+                        controlInputLayout('close');
                         break;
                     }
                     case 5: { // 開啟 功能說明
@@ -346,12 +346,12 @@ $(function(){
                         addLine();
                         break;
                     }
-                    case 3: { // 開啟鋼琴
-                        controlPianoLayout('open');
+                    case 3: { // 開啟輸入面板
+                        controlInputLayout('open');
                         break;
                     }
-                    case 4: { // 關閉鋼琴
-                        controlPianoLayout('close');
+                    case 4: { // 關閉輸入面板
+                        controlInputLayout('close');
                         break;
                     }
                     case 5: { // 開啟 功能說明
