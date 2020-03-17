@@ -364,6 +364,28 @@ $(function(){
                 $(this).removeClass('selected');
             });
         });
+
+        /* 鍵盤事件 */
+		$(window).on('keydown', function(event){
+			//alert(event.keyCode);
+			switch(event.keyCode){
+				case 8: { // Backspace
+					// 刪除簡譜
+                    delTABNote();
+					break;
+				}
+				case 13: { // Enter
+					// 新增簡譜軌道
+                    addLine();
+					break;
+				}
+				case 32: { // Space
+                    // 紀錄簡譜
+                    addTABNote('note-space', '', '');
+					break;
+                }
+			}
+        });
     }
 
     //---------------------------------------------
