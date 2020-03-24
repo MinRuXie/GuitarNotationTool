@@ -203,7 +203,7 @@ $(function(){
             case "close": {
                 $text.stop().animate({'height': '100%'}, 300);
                 $toolbox.stop().animate({'height': '100%'}, 300);
-                $guitar.stop().animate({'bottom': '-35%'}, 300)
+                $guitar.stop().animate({'bottom': '-35%'}, 300);
                 
                 $('.toolbutton').eq(3).css('display', 'block'); // 開啟吉他按鈕
                 $('.toolbutton').eq(4).css('display', 'none'); // 關閉吉他按鈕
