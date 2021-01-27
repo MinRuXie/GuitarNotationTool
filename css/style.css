@@ -185,16 +185,13 @@ html, body {
   bottom: 0;
   width: 100%;
   height: 35%;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow: hidden;
   background-color: #000;
   /* 消除子元素 inlic-block 的上下間隔 */
   line-height: 0;
 }
 .guitar .chord {
-  /* 依照內容決定寬度 */
-  width: auto;
-  display: inline-block;
+  display: flex;
   /* 子元素不換行 */
   white-space: nowrap;
   height: calc(100% / 6);
@@ -235,10 +232,9 @@ html, body {
   background-color: #625550;
 }
 .guitar .chord .grid {
-  width: calc((100vw / 22) - 5px);
+  width: calc(100% / 22);
   height: 100%;
   border-left: 5px solid rgba(255, 255, 255, 0.3);
-  display: inline-block;
   position: relative;
   cursor: pointer;
   transition: 0.3s;
